@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #f0f2f5;
+  //background: linear-gradient(10deg,#ffff80,#80ccff);
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}

@@ -1,0 +1,22 @@
+.headerContainer {
+  display: flex;
+  flex: 1;
+  padding: 10px;
+}
+
+.link {
+  margin-left: 20px;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+}
+
+.activeLink {
+  margin-left: 20px;
+  font-size: 1.4rem;
+  text-decoration: none;
+  background-color: #9ce7fc;
+  border-radius: 7px;
+  padding: 2px;
+}
