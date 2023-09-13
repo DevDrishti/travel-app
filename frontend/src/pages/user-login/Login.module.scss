@@ -1,35 +1,90 @@
+@import "../../sass/abstracts/mixin";
+
 .container {
-  display: flex;
-  flex: 1;
-  box-sizing: border-box;
-  margin: 0;
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  @include fullContainer;
 }
 
 /*left side container*/
 
 .firstContainer {
-  display: flex;
-  flex: 1;
-  background-color: olive;
+  @include firstContent;
 }
 
 /*right side container*/
 
 .secondContainer {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
+  @include secondContent;
+}
+
+.fromContainer {
+  @include fromContent;
 }
 
 .welcome {
-  color: #131a34;
-  text-align: center;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+  @include fromHading;
+}
+
+.paragraph {
+  @include formTypography;
+  margin-top: 1rem;
+}
+
+.inputContainer {
+  @include inputContainer;
+}
+
+.mailInput {
+  @include inputBox;
+  margin-top: 2rem;
+}
+
+.passInput {
+  @include inputBox;
+}
+
+.forgotLink {
+  color: #6679c0;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 1rem;
+}
+
+.btn {
+  @include buttonBox;
+
+  .loginBtn {
+    @include buttonContainer;
+  }
+}
+
+.singLink {
+  @include fromLink;
+}
+
+.horizontal {
+  @include horizontalBox;
+
+  hr {
+    @include hrLine;
+  }
+  .middleName {
+    @include middleName;
+  }
+}
+
+.singIn {
+  @include buttonBox;
+  .googleBtn {
+    @include buttonContainer;
+    height: 35px;
+    background: none;
+    color: #1e1e1e;
+    border: 1px solid #000;
+  }
+}
+
+a {
+  text-decoration: none;
 }
