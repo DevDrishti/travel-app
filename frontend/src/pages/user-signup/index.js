@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useState } from "react";
 import styles from "./User-singup.module.scss";
 import { Input } from "antd";
 import { MdOutlineEmail } from "react-icons/md";
@@ -9,6 +9,10 @@ import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
 function Signup() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [passe, setPasse] = useState("");
+  const [rpass, setRpass] = useState("");
   return (
     <>
       <div className={styles.container}>
@@ -24,6 +28,8 @@ function Signup() {
                 placeholder="Name"
                 prefix={<FaRegUser />}
                 className={styles.userNameInput}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div className={styles.inputContainer}>
@@ -32,6 +38,8 @@ function Signup() {
                 placeholder="Email"
                 prefix={<MdOutlineEmail />}
                 className={styles.mailInput}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className={styles.inputContainer}>
@@ -42,16 +50,20 @@ function Signup() {
                 }
                 prefix={<RiLockPasswordLine />}
                 className={styles.passInput}
+                value={passe}
+                onChange={(e) => setPasse(e.target.value)}
               />
             </div>
             <div className={styles.inputContainer}>
               <Input.Password
-                placeholder="Password"
+                placeholder="Re-enter Password"
                 iconRender={(visible) =>
                   visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
                 }
                 prefix={<RiLockPasswordLine />}
                 className={styles.rePassInput}
+                value={rpass}
+                onChange={(e) => setRpass(e.target.value)}
               />
             </div>
             <div className={styles.btn}>
@@ -76,9 +88,6 @@ function Signup() {
               </a>
             </div>
           </div>
-        </div>
-        <div className={styles.secondContainer}>
-          <div className={styles.text}></div>
         </div>
       </div>
     </>

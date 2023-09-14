@@ -1,0 +1,21 @@
+@import "../../sass/abstracts/mixin";
+.put {
+  margin-bottom: 1.6rem;
+  margin-top: 0.6rem;
+}
+
+.inputTime {
+  width: 35rem;
+}
+
+label {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.btn {
+  @include buttonBox;
+  .submitBtn {
+    @include buttonContainer;
+  }
+}

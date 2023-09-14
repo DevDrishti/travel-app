@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, Login, Signup, About, Forgot } from "../pages";
+import { Home, Login, Signup, About, Forgot, Career, Info } from "../pages";
 import Header from "../components/Header";
 
 const Router = () => {
@@ -10,9 +10,11 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/career" element={<Career />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot" element={<Forgot />} />
+        <Route path="/info" element={<Info />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,24 @@
+@import "../../sass/abstracts/mixin";
+.container {
+  @include sContainer;
+}
+
+.close {
+  @include sClose;
+}
+
+.overly {
+  @include sOverly;
+}
+
+.fromContainer {
+  @include sFromContainer;
+}
+
+.heading {
+  @include sHeading;
+}
+
+.paragraph {
+  @include sParagraph;
+}

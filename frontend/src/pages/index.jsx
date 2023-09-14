@@ -4,3 +4,5 @@ export { default as NotFound } from "./not-found/index";
 export { default as Signup } from "./user-signup/index";
 export { default as About } from "./about/index";
 export { default as Forgot } from "./user-forgot/index";
+export { default as Career } from "./career/index";
+export { default as Info } from "./user-info/index";

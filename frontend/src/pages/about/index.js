@@ -1,10 +1,10 @@
 import React, { memo } from "react";
+import styles from "./About.module.scss";
 
 function About() {
   return (
     <>
-      <h1>Home page</h1>
-      <div></div>
+      <div className={styles.container}></div>
     </>
   );
 }

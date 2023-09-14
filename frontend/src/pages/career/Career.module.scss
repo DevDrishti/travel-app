@@ -1,0 +1,67 @@
+@import "../../sass/abstracts/mixin";
+.container {
+  @include fullContainer;
+  padding-left: 14rem;
+  padding-right: 14rem;
+}
+
+.nextContainer {
+  display: flex;
+  flex: 1;
+  padding: 8px;
+}
+
+.divContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 14px;
+  height: 72rem;
+}
+
+.content1 {
+  @include content;
+}
+
+.content2 {
+  @include content;
+}
+.content3 {
+  @include content;
+}
+.content4 {
+  @include content;
+}
+
+.fContent {
+  padding: 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.hading {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.about {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  width: 40rem;
+}
+
+.sContent {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.btn {
+  @include buttonBox;
+
+  .regBtn {
+    @include buttonContainer;
+    width: 270px;
+  }
+}

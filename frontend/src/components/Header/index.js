@@ -18,6 +18,12 @@ function Header() {
         <NavLink className={navLinkStyle} to="/about">
           About
         </NavLink>
+        <NavLink className={navLinkStyle} to="/career">
+          Careers
+        </NavLink>
+        <NavLink className={navLinkStyle} to="/info">
+          Info
+        </NavLink>
         <NavLink className={navLinkStyle} to="/login">
           Login
         </NavLink>
