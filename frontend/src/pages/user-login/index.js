@@ -6,18 +6,40 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import { FcGoogle } from "react-icons/fc";
 //import { FaFacebook } from "react-icons/fa";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
   const [mail, setMail] = useState("");
   const [pass, setPass] = useState("");
-  const [entry, setEntry] = useState("");
-
-  const submitFrom = (e) => {
-    e.preventDefault();
+  //const [entry, setEntry] = useState("");
+  const history=useNavigate()
+  const submitFrom =async () => {
     const newEntry = { mail: mail, pass: pass };
-    setEntry([...entry, newEntry]);
-    console.log(entry);
+    setMail(mail)
+    setPass(pass)
+    console.log(newEntry);
+    await fetch("http://localhost:5000/login",{
+            method:'POST',
+            headers:{
+              "Accept":"application/json",
+              "Content-Type":"application/json"
+            },
+            body:JSON.stringify(newEntry)
+          }).then((res)=>{
+            if(res.statusStatus===404)         
+            {
+              setMail("")
+              setPass("")
+              console.log("Not found")
+              history("/notfound")
+            }
+            else
+            {
+              console.log("success")
+              console.log(newEntry)
+              history("/")
+            }
+          }).then((data)=>console.log(data))
   };
   return (
     <>
@@ -28,9 +50,10 @@ function Login() {
             <div className={styles.paragraph}>
               Log in to your account using email or social networks
             </div>
-            <from action="" onSubmit={submitFrom}>
+            <from action="" >
               <div className={styles.inputContainer}>
                 <Input
+                name="mail"
                   size="large"
                   placeholder="Email"
                   prefix={<MdOutlineEmail />}
@@ -41,6 +64,7 @@ function Login() {
               </div>
               <div className={styles.inputContainer}>
                 <Input.Password
+                  name="pass"
                   placeholder="Password"
                   iconRender={(visible) =>
                     visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
@@ -55,8 +79,8 @@ function Login() {
                 <Link to="/forgot">Forgot Password?</Link>
               </div>
               <div className={styles.btn}>
-                <Link to="/">
-                  <button className={styles.loginBtn} type="submit">
+                <Link>
+                  <button className={styles.loginBtn} type="submit" onClick={submitFrom}>
                     Log In
                   </button>
                 </Link>

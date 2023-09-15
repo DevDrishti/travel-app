@@ -6,10 +6,12 @@
 
 .link {
   margin-left: 20px;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   text-align: center;
   color: #000;
   text-decoration: none;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .activeLink {
@@ -18,5 +20,7 @@
   text-decoration: none;
   background-color: #9ce7fc;
   border-radius: 7px;
-  padding: 2px;
+  padding: 4px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
 }

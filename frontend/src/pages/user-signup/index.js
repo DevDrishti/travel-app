@@ -9,10 +9,28 @@ import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
 function Signup() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [passe, setPasse] = useState("");
-  const [rpass, setRpass] = useState("");
+
+ 
+  const [Name,setName]=useState('')
+  const [Email,setEmail]=useState('')
+  const [Password,setPassword]=useState('')
+  let userData={
+    name:Name,
+    email:Email,
+    password:Password
+  }
+  const sendData=async (evt)=>{
+        await fetch("http://localhost:5000/signup",{
+          method:'POST',
+          headers:{
+            "Accept":"application/json",
+            "Content-Type":"application/json"
+          },
+          body:JSON.stringify(userData)
+        }).then(res=>res.json()).then(data=>console.log(data))
+        console.log(userData)
+  }
+
   return (
     <>
       <div className={styles.container}>
@@ -24,34 +42,36 @@ function Signup() {
             </div>
             <div className={styles.inputContainer}>
               <Input
+                name="Name"
                 size="large"
                 placeholder="Name"
                 prefix={<FaRegUser />}
                 className={styles.userNameInput}
-                value={name}
+                //value={name}
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div className={styles.inputContainer}>
               <Input
+              name="Email"
                 size="large"
                 placeholder="Email"
                 prefix={<MdOutlineEmail />}
                 className={styles.mailInput}
-                value={email}
+               // value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className={styles.inputContainer}>
               <Input.Password
+                name="Password"
                 placeholder="Password"
                 iconRender={(visible) =>
                   visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
                 }
                 prefix={<RiLockPasswordLine />}
                 className={styles.passInput}
-                value={passe}
-                onChange={(e) => setPasse(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className={styles.inputContainer}>
@@ -62,13 +82,13 @@ function Signup() {
                 }
                 prefix={<RiLockPasswordLine />}
                 className={styles.rePassInput}
-                value={rpass}
-                onChange={(e) => setRpass(e.target.value)}
+                //value={rpass}
+                //onChange={(e) => setRpass(e.target.value)}
               />
             </div>
             <div className={styles.btn}>
-              <Link to="/login">
-                <button className={styles.loginBtn}>Sing Up</button>
+              <Link onClick={sendData} to="/login">
+                <button className={styles.loginBtn}>Sign Up</button>
               </Link>
             </div>
             <div className={styles.singLink}>
@@ -92,6 +112,6 @@ function Signup() {
       </div>
     </>
   );
-}
+              }
 
 export default memo(Signup);

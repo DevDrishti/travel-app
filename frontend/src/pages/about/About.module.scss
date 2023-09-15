@@ -24,7 +24,6 @@
   display: flex;
   width: fit-content;
   height: fit-content;
-  background-color: yellow;
   margin-left: 4rem;
   padding: 14px;
 }
@@ -32,4 +31,23 @@
 .paras {
   font-size: 1.6rem;
   margin-top: 1rem;
+}
+
+.ab {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-right: 4rem;
+}
+
+.f1 {
+  background-image: url(../../../public/assets/undefined24.webp);
+  height: 50rem;
+  width: 30rem;
+}
+
+.f2 {
+  background-image: url(../../../public/assets/undefined21.webp);
+  height: 50rem;
+  width: 30rem;
+  margin-left: 2rem;
 }

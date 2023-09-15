@@ -6,6 +6,7 @@ function About() {
     <>
       <div className={styles.container}>
         <div className={styles.firstContainer}>
+          <div className={styles.ab}>About Us</div>
           <div className={styles.paras}>
             “YatraYugIndia” a platform , where we one can find a all in one
             assured tourist guidance and complete package that consists of
@@ -32,7 +33,11 @@ function About() {
             tourism in India.
           </div>
         </div>
-        <div className={styles.secodContainer}></div>
+        <div className={styles.secodContainer}>
+          <div className={styles.f1}></div>
+          <div className={styles.f2}></div>
+          <div className={styles.f3}></div>
+        </div>
       </div>
     </>
   );
