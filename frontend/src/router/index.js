@@ -1,6 +1,15 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, Login, Signup, About, Forgot, Career, Info } from "../pages";
+import {
+  Home,
+  Login,
+  Signup,
+  About,
+  Forgot,
+  Career,
+  Info,
+  Hotel,
+} from "../pages";
 import Header from "../components/Header";
 
 const Router = () => {
@@ -15,6 +24,7 @@ const Router = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot" element={<Forgot />} />
         <Route path="/info" element={<Info />} />
+        <Route path="/hotel" element={<Hotel />} />
       </Routes>
     </BrowserRouter>
   );

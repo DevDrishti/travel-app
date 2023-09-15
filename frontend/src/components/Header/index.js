@@ -27,6 +27,9 @@ function Header() {
         <NavLink className={navLinkStyle} to="/login">
           Login
         </NavLink>
+        <NavLink className={navLinkStyle} to="/hotel">
+          Hotel Register
+        </NavLink>
       </nav>
     </>
   );

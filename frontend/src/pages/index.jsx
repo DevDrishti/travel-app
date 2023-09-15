@@ -6,3 +6,4 @@ export { default as About } from "./about/index";
 export { default as Forgot } from "./user-forgot/index";
 export { default as Career } from "./career/index";
 export { default as Info } from "./user-info/index";
+export { default as Hotel } from "./Hotel/index";

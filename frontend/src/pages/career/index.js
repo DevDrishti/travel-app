@@ -21,7 +21,7 @@ function Career() {
             <Popup4 open={pop2} onClose={() => setPop2(false)} />
             <div className={styles.content1}>
               <div className={styles.fContent}>
-                <div className={styles.hading}> Experian Tourism</div>
+                <div className={styles.hading}> Experiential Tourism</div>
                 <div className={styles.about}>
                   Register In our platform as a workshop organiser or as a
                   seller and get a chance to work with us.

@@ -1,3 +1,4 @@
+@import "../../sass/abstracts/mixin";
 .container {
   display: flex;
   flex: 1;
@@ -5,5 +6,62 @@
   margin: 0;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  //background-color: red;
+  padding: 24px;
   // background-color: aquamarine;
+}
+
+.hContent {
+  display: flex;
+  flex: 1;
+  padding-left: 24px;
+  padding-right: 24px;
+  flex-direction: column;
+  height: 229%;
+  margin-left: 8.5rem;
+  //background-color: rebeccapurple;
+}
+
+.content1 {
+  @include homeImg;
+  background-image: url(../../../public/assets/home1.webp);
+}
+
+.content2 {
+  @include homeImg;
+  background-image: url(../../../public/assets/home2.webp);
+}
+
+.content3 {
+  @include homeImg;
+  background-image: url(../../../public/assets/home3.webp);
+}
+
+.content4 {
+  @include homeImg;
+  background-image: url(../../../public/assets/home4.webp);
+}
+
+.interDiv {
+  height: fit-content;
+  width: 26rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  background-color: aqua;
+}
+
+.topLine {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.para {
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+.price {
+  margin-top: 1rem;
+  font-size: 1.4rem;
 }

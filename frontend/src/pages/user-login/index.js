@@ -63,11 +63,11 @@ function Login() {
               </div>
             </from>
             <div className={styles.singLink}>
-              First time here?<Link to="/signup">Sing up</Link>
+              First time here?<Link to="/signup">Sign up</Link>
             </div>
             <div className={styles.horizontal}>
               <hr />
-              <div className={styles.middleName}>Or Sing in with</div>
+              <div className={styles.middleName}>Or Sign in with</div>
               <hr />
             </div>
             <div className={styles.singIn}>
